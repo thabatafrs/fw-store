@@ -24,15 +24,9 @@ export default function RootLayout({
         <div className="flex h-full flex-col">
           <AuthProvider>
             <CartProvider>
-<<<<<<< HEAD
               <Header />
               <div className="flex-1">{children}</div>
               <Footer />
-=======
-            <Header />
-            <div className="flex-1">{children}</div>
-            <Footer />
->>>>>>> b4ddfee108e55df9249787003099452dc1e21dfb
             </CartProvider>
           </AuthProvider>
         </div>
