@@ -1,7 +1,9 @@
+
 "use client";
 
 import { Product } from "@prisma/client";
 import { ReactNode, createContext } from "react";
+
 
 interface CartProduct extends Product {
   quantity: number;
@@ -13,6 +15,7 @@ interface ICartContext {
   cartBasePrice: number;
   cartTotalDiscount: number;
 }
+
 
 const CartContext = createContext<ICartContext>({
   products: [],
