@@ -70,12 +70,12 @@ const ProductInfo = ({
         </Button>
       </div>
 
-      <div className="mt-6 flex flex-col gap-2">
+      <div className="mt-8 flex flex-col gap-3">
         <h3 className="font-bold ">Descrição</h3>
         <p className="text-justify text-sm opacity-60">{description}</p>
       </div>
 
-      <Button className="mt-6 font-bold uppercase">
+      <Button className="mt-8 font-bold uppercase">
         Adicionar ao carrinho
       </Button>
 
