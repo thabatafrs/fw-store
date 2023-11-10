@@ -19,12 +19,16 @@ const Cart = () => {
       </Badge>
 
       <div className="flex flex-col gap-5 ">
-        {products.map((product) => (
-          <CartItem
-            key={product.id}
-            product={computeProductsTotalPrice(product as any) as any}
-          />
-        ))}
+        {products.length > 0 ? (
+          products.map((product) => (
+            <CartItem
+              key={product.id}
+              product={computeProductsTotalPrice(product as any) as any}
+            />
+          ))
+        ) : (
+          <p>Carrinho vazio. Vamos fazer compras?</p>
+        )}
       </div>
     </div>
   );

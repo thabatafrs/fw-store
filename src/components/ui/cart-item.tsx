@@ -76,7 +76,7 @@ const CartItem = ({ product }: CartItemProps) => {
         </div>
       </div>
 
-      <Button size="icon" variant="outline" onClick={handleRemoveProductClick}>
+      <Button size="icon" variant="outline" onClick={handleRemoveProductClick }>
         <TrashIcon size={16} />
       </Button>
     </div>
