@@ -4,9 +4,10 @@ import { CartContext } from "@/providers/cart";
 import { useContext } from "react";
 import CartItem from "./cart-item";
 import { computeProductsTotalPrice } from "@/helpers/products";
+import { Separator } from "./separator";
 
 const Cart = () => {
-  const { products } = useContext(CartContext);
+  const { products, subtotal, total, totalDiscount } = useContext(CartContext);
 
   return (
     <div className="flex flex-col gap-8">
@@ -29,6 +30,32 @@ const Cart = () => {
         ) : (
           <p>Carrinho vazio. Vamos fazer compras?</p>
         )}
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <Separator />
+        <div className="flex items-center justify-between text-xs">
+          <p>Subtotal</p>
+          <p>R$ {subtotal.toFixed(2)}</p>
+        </div>
+
+        <Separator />
+        <div className="flex items-center justify-between text-xs">
+          <p>Entrega</p>
+          <p>GRÁTIS</p>
+        </div>
+
+        <Separator />
+        <div className="flex items-center justify-between text-xs">
+          <p>Descontos</p>
+          <p>- R$ {totalDiscount.toFixed(2)}</p>
+        </div>
+
+        <Separator />
+        <div className="flex items-center justify-between text-sm font-bold">
+          <p>Total</p>
+          <p>R$ {total.toFixed(2)}</p>
+        </div>
       </div>
     </div>
   );
