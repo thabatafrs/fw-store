@@ -29,7 +29,7 @@ const createCheckout = async (products: CartProduct[]) => {
     }),
   });
 
-  return checkout
+  return checkout;
 };
 
 export default createCheckout;
